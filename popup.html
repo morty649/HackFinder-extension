@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HackFinder</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="shell">
+  <div class="page">
+    <section class="cover">
+      <div class="cover-kicker">Browser Extension</div>
+      <div class="logo">HackFinder</div>
+      <p class="cover-sub">Aggregated from different public sources.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-number">Section 01</div>
+      <h2>Search Parameters</h2>
+      <p class="section-intro">Choose your city and domains. Results are grouped by distance and relevance.</p>
+    </section>
+
+    <section class="controls">
+      <div class="panel">
+        <div class="panel-label">Location</div>
+        <div class="search-input-wrap">
+          <input type="text" class="search-input" id="cityInput" placeholder="Enter your city" autocomplete="off">
+          <button class="geo-btn" id="geoBtn" title="Use my location" aria-label="Use my location">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M12 1v4M12 19v4M1 12h4M19 12h4"></path>
+              <circle cx="12" cy="12" r="8" stroke-dasharray="2 4"></circle>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-label">Domain Filters</div>
+        <div class="tags-grid" id="tagsGrid">
+          <button class="tag-btn" data-domain="AI/ML">AI/ML</button>
+          <button class="tag-btn" data-domain="Web3">Web3</button>
+          <button class="tag-btn" data-domain="HealthTech">HealthTech</button>
+          <button class="tag-btn" data-domain="FinTech">FinTech</button>
+          <button class="tag-btn" data-domain="SocialImpact">SocialImpact</button>
+          <button class="tag-btn" data-domain="GameDev">GameDev</button>
+          <button class="tag-btn" data-domain="Cybersecurity">Cybersecurity</button>
+          <button class="tag-btn" data-domain="Mobile">Mobile</button>
+          <button class="tag-btn" data-domain="Open">Open</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="submit-area">
+      <button class="submit-btn" id="submitBtn">Search Hackathons</button>
+    </section>
+
+    <div class="divider"></div>
+
+    <nav class="category-nav" id="categoryNav" style="display:none">
+      <button class="cat-btn active" data-cat="nearby">
+        <span class="cat-title">Nearby and Relevant</span>
+        <span class="cat-count" id="count-nearby">0 results</span>
+      </button>
+      <button class="cat-btn" data-cat="online">
+        <span class="cat-title">Online and Relevant</span>
+        <span class="cat-count" id="count-online">0 results</span>
+      </button>
+      <button class="cat-btn" data-cat="far">
+        <span class="cat-title">Far Away and Relevant</span>
+        <span class="cat-count" id="count-far">0 results</span>
+      </button>
+      <button class="cat-btn" data-cat="others">
+        <span class="cat-title">Others</span>
+        <span class="cat-count" id="count-others">0 results</span>
+      </button>
+    </nav>
+
+    <section class="results-section" id="resultsSection" style="display:none">
+      <div class="results-header">
+        <span class="results-title" id="resultsTitle">Results</span>
+      </div>
+      <div id="resultsGrid"></div>
+    </section>
+  </div>
+
+  <div class="status-bar">
+    <span><span class="status-dot" id="statusDot"></span><span id="statusText">Ready</span></span>
+    <span>made with ❤️ for community</span>
+  </div>
+</div>
+
+<script type="module" src="popup.js"></script>
+</body>
+</html>

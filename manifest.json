@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "HackFinder",
+  "version": "1.0.0",
+  "description": "Discover hackathons from MLH and aggregated_source listings by location and domain.",
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "action": {
+    "default_title": "HackFinder",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "permissions": ["geolocation", "storage"],
+  "host_permissions": [
+    "https://www.mlh.com/*",
+    "https://mlh.com/*",
+    "https://my.mlh.io/*",
+    "https://devpost.com/*",
+    "https://nominatim.openstreetmap.org/*",
+    "https://www.eventbriteapi.com/*",
+    "https://api.meetup.com/*",
+    "https://www.hackathon.com/*",
+    "https://www.hackerearth.com/*"
+  ]
+}
