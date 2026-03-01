@@ -58,7 +58,7 @@ This reduces time and makes event discovery easier, especially for beginners.
 1. Open `chrome://extensions`
 2. Enable `Developer mode`
 3. Click `Load unpacked`
-4. Select `/extension` folder that you just cloned or downloaded from this repo
+4. Select `/HackFinder-extension` folder that you just cloned or downloaded from this repo
 5. Pin the extension and click it to open
 
 ## How to use
